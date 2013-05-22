@@ -90,51 +90,10 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9" id="content">
-                    
-		<div class='article'>
-		<h1><a href="/list-delete-sort.html">行列表中列的删除和排序</a></h1>
-		<div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-05-22T17:53:32">
-	<i class="icon-calendar"></i>2013-05-22 17时53分32秒
-</abbr>
-<span class="label">By</span>
-<a href="/author/elvincracker.html"><i class="icon-user"></i>Elvin.Cracker</a>
-<span class="label">Category</span>
-<a href="/category/python.html"><i class="icon-folder-open"></i>Python</a>. 
-
-	
-<span class="label">Tags</span> 
-	<a href="/tag/python.html"><i class="icon-tag"></i>Python</a>
-	<a href="/tag/list.html"><i class="icon-tag"></i>List</a>
-</footer><!-- /.post-info --></div>
-		<div class="summary"><p>如果你有一个包含列表（行）的列表，现在你想获得另外一个列表，该列表包含了同样的行，但是其中一些列被删除或者被排序了，那应该如何处理呢？</p>
-<p>假设你有如下列表：</p>
-<div class="highlight"><pre><span class="n">list_of_rows</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
-</pre></div>
-
-
-<p>现在你需要一个同样的列表，但是第二列被删除了，并且第一列与第三列调换了顺序。你可以使用列表推导的方式来实现，如下：</p>
-<div class="highlight"><pre><span class="n">list_of_news</span> <span class="o">=</span> <span class="p">[[</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="k">for</span> <span class="n">row</span> <span class="n">in</span> <span class="n">list_of_rows</span><span class="p">]</span>
-</pre></div>
-
-
-<p>你可以在列表推导的内部使用一个嵌套的辅助序列（列表或元组），这样也许看起来更优雅一些，如下：</p>
-<div class="highlight"><pre><span class="n">list_of_news</span> <span class="o">=</span> <span class="p">[[</span><span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span> <span class="k">for</span> <span class="n">row</span> <span class="n">in</span> <span class="n">list_of_rows</span><span class="p">]</span>
-</pre></div>
-
-
-<p>列表推导会产生一个新的列表，而不是修改现有的列表 ...</p> 
-			<a class="btn primary xsmall" href="/list-delete-sort.html">more ...</a>
-		</div>
-	</div>	
-	<hr />
-	
-				<section id="content" class="body">    
-		<h1>Pages</h1>
-					<li><a href="/pages/about.html">About</a></li>
-				</section>
-	        </div><!--/span-->
+            <ul>
+	<li><a href="category/python.html">Python</a></li>
+</ul>
+        </div><!--/span-->
       
 		<div class="span3 well sidebar-nav" id="sidebar">
             <ul class="nav nav-list">
