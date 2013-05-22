@@ -92,15 +92,58 @@
         <div class="span9" id="content">
             <section id="content" class="body">    
 	<h1 class="entry-title">About</h1>
-		<p>最近总在折腾博客, 导致之前连接全部丢失, 就此固定此博客, 使用静态生成系统, 因为我是个写python的, 并且对ruby那一套完全不懂, 所以没有选用 <code>Jekyll</code>, 而是使用了Python编写的<code>pelican</code></p>
-<h2>博主</h2>
-<p>一个爱好开源技术的人, 对Python比较熟悉, 也喜欢用Python捣腾一些东西, 目前从事一份Python的工作, 操作系统喜欢Linux, 编辑器使用Vim, 感觉Linux使用Vim编写Python非常爽, 目前使用Ubuntu配置Awesome窗体管理, 工作起来非常高效</p>
-<h2>许可</h2>
-<p><img alt="知识共享许可协议" src="http://i.creativecommons.org/l/by-sa/3.0/cn/88x31.png" />
-本站所有作品均采用<a href="http://creativecommons.org/licenses/by-sa/3.0/cn/">知识共享署名-相同方式共享 3.0 中国大陆许可协议</a>进行许可。</p>
-<h2>联系</h2>
-<p>博主现在维护一个 <code>Gtalk</code>群, 喜欢使用<code>Gtalk</code>的用户可以添加 <code>clubot@vim-cn.com</code>交流</p>
-<p>也可以给我发送邮件: <code>d2hfbGludXhAMTI2LmNvbQ==</code></p>
+		<div class="highlight"><pre><span class="c">#/usr/bin/env python</span>
+<span class="c">#-*-coding:utf-8-*-</span>
+
+<span class="k">class</span> <span class="nc">Whoami</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    I&#39;m Elvin.Cracker</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s">&#39;Name&#39;</span><span class="p">:</span> <span class="s">&#39;Elvin.Cracker(WangShuo)&#39;</span><span class="p">,</span>
+            <span class="s">&#39;Gender&#39;</span><span class="p">:</span> <span class="s">&#39;Male&#39;</span><span class="p">,</span>
+            <span class="s">&#39;Born&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;1988&#39;</span><span class="p">,</span> <span class="s">&#39;11&#39;</span><span class="p">,</span> <span class="s">&#39;05&#39;</span><span class="p">],</span>
+            <span class="s">&#39;Education&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">&#39;University&#39;</span><span class="p">:</span> <span class="s">&#39;Beijing Institute of Petrochemical Technology&#39;</span><span class="p">,</span>
+                <span class="s">&#39;Major&#39;</span><span class="p">:</span> <span class="s">&#39;Computer Science and Technology&#39;</span><span class="p">,</span>
+                <span class="s">&#39;Degree&#39;</span><span class="p">:</span> <span class="s">&#39;Bachelor&#39;</span><span class="p">,</span>
+                <span class="s">&#39;Graduation&#39;</span><span class="p">:</span> <span class="s">&#39;2011&#39;</span>
+            <span class="p">},</span>
+            <span class="s">&#39;Job&#39;</span><span class="p">:</span> <span class="s">&#39;OP-&gt;DevOps&#39;</span><span class="p">,</span>
+            <span class="s">&#39;Idol&#39;</span><span class="p">:</span> <span class="s">&#39;Jack Ma(Alibaba)&#39;</span><span class="p">,</span>
+            <span class="s">&#39;Characteristics&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="s">&#39;Simple&#39;</span><span class="p">,</span> <span class="s">&#39;Introvert&#39;</span><span class="p">,</span> <span class="s">&#39;Low Profile&#39;</span><span class="p">,</span> <span class="s">&#39;Positive Energy&#39;</span><span class="p">]</span>
+            <span class="p">],</span>
+            <span class="s">&#39;Contact&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">&#39;Email&#39;</span><span class="p">:</span> <span class="s">&#39;elvin.cracker@foxmail.com&#39;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">blog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s">&#39;Domain&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">&#39;URL&#39;</span><span class="p">:</span> <span class="s">&#39;http://wangshuo.me/&#39;</span><span class="p">,</span>
+                <span class="s">&#39;Host&#39;</span><span class="p">:</span> <span class="s">&#39;Github-&gt;VPS&#39;</span>
+            <span class="p">},</span>
+            <span class="s">&#39;Technology&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="s">&#39;Pelican-&gt;Django&#39;</span><span class="p">,</span> <span class="s">&#39;Bootstrap&#39;</span><span class="p">,</span> <span class="s">&#39;Markdown&#39;</span><span class="p">]</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">todo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s">&#39;Keywords&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s">&#39;Tag&#39;</span><span class="p">,</span> <span class="s">&#39;Archive&#39;</span><span class="p">,</span> <span class="s">&#39;Ranking&#39;</span><span class="p">,</span> <span class="s">&#39;Comment&#39;</span><span class="p">,</span> <span class="s">&#39;SEO&#39;</span><span class="p">,</span> <span class="s">&#39;...&#39;</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">wangshuo</span> <span class="o">=</span> <span class="n">Whoami</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">wangshuo</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </section>
         </div><!--/span-->
       
